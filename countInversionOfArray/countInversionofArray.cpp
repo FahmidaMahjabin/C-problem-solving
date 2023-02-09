@@ -40,7 +40,7 @@ int countInversion(vector<int>& array1){
     int n = 0;
     mergeSort(array1, &n);
 //    changeN(&n);
-    cout<<"number of conversion:"<<n;
+    cout<<"countInversion:"<<n;
     return n;
 
 }
@@ -84,6 +84,7 @@ vector<int> mergeTwoSortedArray(vector<int> &array1, vector<int>& array2,int* co
         }
         else{
             //cout<<"array2[q] is added:"<<array2[q]<<"\n";
+            //if kth element in leftArray is greater than the right array then all the rest element from k to array size of array1 elements are greater than qth element.
             mergedArray.push_back(array2[q]);
             for(int k = p; k< array1.size(); k++){
                 *countInversion = *countInversion + 1;
